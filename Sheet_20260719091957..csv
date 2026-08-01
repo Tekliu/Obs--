@@ -1,0 +1,3 @@
+﻿寄存器,全称,干啥的
+SS,Stack Segment（栈段）,栈段选择子（保护模式） / 栈段基址（实模式）
+ESP,Stack Pointer（栈指针）,指向当前栈顶（栈向低地址生长，push 时 ESP-，pop 时 ESP+）

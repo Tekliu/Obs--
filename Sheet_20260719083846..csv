@@ -1,0 +1,6 @@
+﻿,GDT,LDT
+全称,Global Descriptor Table,Local Descriptor Table
+范围,全局一份，所有任务共享,每任务一份（理论上）
+存哪,内存某处，基址存进 GDTR 寄存器,内存某处，基址存进 LDTR 寄存器
+装啥,内核代码段、内核数据段、用户代码段、TSS、LDT 自己也能挂一条,某个用户进程的私段（如果 OS 用了 LDT 的话）
+选择子 TI 位,TI=0 → 查 GDT,TI=1 → 查 LDT

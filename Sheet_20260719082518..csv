@@ -1,0 +1,3 @@
+﻿寄存器,全称,干啥的
+CS,Code Segment（代码段）,"管""代码存在哪个段里"""
+IP,Instruction Pointer（指令指针）,"管""段内偏移多少"""
