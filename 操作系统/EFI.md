@@ -23,12 +23,12 @@ timeline
 ```
 
 **关键转折**：2005 年 Intel 把 EFI 移交给 UEFI Forum 产业联盟，改名为 UEFI。**所以今天你听到"EFI"和"UEFI"指的是同一套东西**——只是老文档/老人口头还叫 EFI。
-
+forum论坛
 ## EFI 规范里定义的几大核心概念
 
 ### 1️⃣ EFI System Partition（ESP，EFI 系统分区）
 
-主板固件能识别的特殊 FAT32 分区，存放 OS Loader 和 EFI 应用：
+主板固件能识别的特殊 [[FAT32]] 分区，存放 OS Loader 和 EFI 应用：
 
 ```
 ESP (通常 100-500MB, GPT 类型 GUID: C12A7328-F81F-11D2-BA4B-00A0C93EC93B)

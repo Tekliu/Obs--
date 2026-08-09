@@ -1,7 +1,6 @@
 MSR = **Model-Specific Register（模型特定寄存器）**——x86 CPU 内部的一类**64 位控制/状态寄存器**，用于让系统软件（OS 内核、hypervisor、固件）**控制 CPU 功能开关、调试、追踪程序执行、监测 CPU 性能**等 。Intel 从 Pentium 开始正式引入 `RDMSR` / `WRMSR` 两条指令来读写它们 。
 
 > 💡 一句话抓住：**MSR 不是给应用程序用的通用寄存器（像 RAX/RBX 那种），而是 CPU 内部的"控制面板/状态灯"——内核通过 `RDMSR`/`WRMSR` 在 Ring 0 读写它们，来打开/关闭/配置 CPU 的各项底层特性。**
-
 ## 为什么叫"Model-Specific"
 
 **Model-Specific = 型号相关**​ —— 不同 CPU 型号、不同厂商（Intel vs AMD）的 MSR **可能完全不一样**，每出一款新 CPU 都可能引入新的 MSR 。
@@ -32,7 +31,7 @@ WRMSR：写 MSR
 
 ### 特权要求
 
-**必须在 Ring 0（CPL=0）或实地址模式下执行**，否则触发 `#GP(0)` 通用保护异常 。这也是为什么：
+**必须在 Ring 0（[[CPL]]=0）或实地址模式下执行**，否则触发 `#GP(0)` 通用保护异常 。这也是为什么：
 
 - 用户态程序**不能直接**读写 MSR
     
